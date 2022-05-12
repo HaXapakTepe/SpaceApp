@@ -4,5 +4,166 @@
 @import 'libs';
 @import 'global';
 
+.wrapper {
+  height: 100vh;
+  background-image: url(../images/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+}
+
+.header {
+  padding-top: 48px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.menu {
+  &__list {
+    display: flex;
+  }
+
+  &__item+.menu__item {
+    padding-left: 50px;
+  }
+
+  &__link {
+    font-weight: 700;
+    font-size: 18px;
+    color: $default;
+    transition: all 0.3s;
+
+    &:hover {
+      color: $accent;
+    }
+  }
+
+  &__link--active {
+    color: $accent;
+  }
+}
+
+.presentation {
+  &__link {
+    padding: 18px 50px;
+    background: $accent;
+    color: $default;
+    border-radius: 10px;
+    transition: all 0.3s;
+
+    &:hover {
+      background: #aa0202;
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+}
+
+.analytics {
+  padding-top: 78px;
+
+  &__box {
+    position: relative;
+  }
+
+  &__image {
+    margin: 0 auto;
+  }
+
+  &__icon-mini {
+    position: absolute;
+    right: 72px;
+    bottom: 0;
+  }
+
+  &__title {
+    padding-top: 80px;
+    font-weight: 900;
+    font-size: 64px;
+    text-align: center;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: center;
+    padding-top: 78px;
+  }
+
+  &__item {
+    align-self: flex-start;
+    width: 180px;
+    background: #c4c4c433;
+    border: 2px solid #64646454;
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    cursor: pointer;
+  }
+
+  &__item--active {
+    width: 100%;
+    max-width: 600px;
+    background-image: url(../images/bg-content.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__item--active .analytics__subtitle {
+    text-align-last: left;
+  }
+
+  &__item--active .analytics__item-icon {
+    position: relative;
+    background-color: $accent;
+    width: 93px;
+    height: 93px;
+    border-radius: 50%;
+    margin-left: 0;
+  }
+
+  &__item--active .analytics__item-box {
+    padding: 25px 25px 61px;
+  }
+
+  &__item-icon {
+    position: relative;
+    width: 73px;
+    height: 73px;
+    margin: 0 auto 25px;
+    background-color: $accent;
+    border-radius: 50%;
+  }
+
+  &__item+.analytics__item {
+    margin-left: 30px;
+  }
+
+  &__item-box {
+    padding: 25px 10px 20px;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+  }
+
+  &__subtitle {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  &__text {
+    max-width: 550px;
+  }
+}
 
 @import 'media';

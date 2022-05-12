@@ -6,6 +6,11 @@ body {
 body {
   display: flex;
   flex-direction: column;
+  font-family: $PFAgoraSansPro;
+  font-weight: 400;
+  color: $default;
+  font-size: 16px;
+  line-height: 1.2;
 }
 
 main {
@@ -13,6 +18,7 @@ main {
 }
 
 .container {
+  max-width: 1260px;
   margin: 0 auto;
   padding: 0 15px;
 }
