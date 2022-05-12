@@ -22,3 +22,32 @@ main {
   margin: 0 auto;
   padding: 0 15px;
 }
+
+.link {
+  padding: 18px 50px;
+  background: $accent;
+  color: $default;
+  border-radius: 10px;
+  transition: all 0.3s;
+
+  &:hover {
+    background: #aa0202;
+  }
+}
+
+.title {
+  position: relative;
+  padding-top: 80px;
+  color: $title;
+  font-weight: 900;
+  font-size: 32px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 60px;
+    width: 75px;
+    height: 8px;
+    background: #E01E2E;
+  }
+}

@@ -5,7 +5,7 @@
 @import 'global';
 
 .wrapper {
-  height: 100vh;
+  padding-bottom: 110px;
   background-image: url(../images/bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -50,23 +50,12 @@
 .presentation {
   &__link {
     padding: 18px 50px;
-    background: $accent;
-    color: $default;
-    border-radius: 10px;
-    transition: all 0.3s;
-
-    &:hover {
-      background: #aa0202;
-    }
-
-    &:active {
-      transform: scale(0.95);
-    }
   }
 }
 
 .analytics {
   padding-top: 78px;
+  margin-bottom: 100px;
 
   &__box {
     position: relative;
@@ -105,10 +94,14 @@
     cursor: pointer;
   }
 
+  &__item .analytics__text {
+    display: none;
+  }
+
   &__item--active {
     width: 100%;
     max-width: 600px;
-    background-image: url(../images/bg-content.png);
+    background-image: url(../images/bg-content.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -128,6 +121,14 @@
 
   &__item--active .analytics__item-box {
     padding: 25px 25px 61px;
+  }
+
+  &__item--active .analytics__text {
+    display: block;
+  }
+
+  &__item--active .analytics__subtitle--first {
+    margin-bottom: 20px;
   }
 
   &__item-icon {
@@ -161,8 +162,23 @@
     text-align: center;
   }
 
+  &__subtitle--first {
+    margin-bottom: 0;
+  }
+
   &__text {
     max-width: 550px;
+  }
+}
+
+.info {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__link {
+    padding: 18px 75px;
   }
 }
 
