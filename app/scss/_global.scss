@@ -32,7 +32,16 @@ main {
 
   &:hover {
     background: #aa0202;
+    box-shadow: 0px 0px 20px #aa0202;
   }
+}
+
+.icon {
+  position: relative;
+  width: 73px;
+  height: 73px;
+  background-color: $accent;
+  border-radius: 50%;
 }
 
 .title {
