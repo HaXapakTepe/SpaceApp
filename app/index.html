@@ -61,7 +61,7 @@
           <ul class="analytics__items">
             <li class="analytics__item analytics__item--active">
               <div class="analytics__item-box">
-                <div class="analytics__item-icon icon">
+                <div class="analytics__item-icon analytics__item-icon--first icon">
                   <img class="analytics__icon" src="images/icons/icon-1.svg" alt="">
                 </div>
                 <p class="analytics__subtitle analytics__subtitle--first">
@@ -133,7 +133,9 @@
             <h2 class="info__title title">
               Промо-давление увеличивается
             </h2>
-            <div class="info__schedule"></div>
+            <div class="info__chart">
+              <canvas id="myChart" width="550" height="340"></canvas>
+            </div>
             <a class="info__link link" href="#">Почему увеличивается?</a>
           </div>
           <div class="info__content">
@@ -185,7 +187,7 @@
                 </div>
               </div>
               <div class="slider__item">
-                <p class="slider__subtitle">
+                <p class="slider__subtitle slider__subtitle--right">
                   Преобразование данных
                 </p>
                 <div class="slider__info">
@@ -251,7 +253,7 @@
                 </div>
               </div>
               <div class="slider__item">
-                <p class="slider__subtitle">
+                <p class="slider__subtitle slider__subtitle--right">
                   Преобразование данных
                 </p>
                 <div class="slider__info">
@@ -317,7 +319,7 @@
                 </div>
               </div>
               <div class="slider__item">
-                <p class="slider__subtitle">
+                <p class="slider__subtitle slider__subtitle--right">
                   Преобразование данных
                 </p>
                 <div class="slider__info">
@@ -361,7 +363,6 @@
   <footer class="footer">
 
   </footer>
-
   <script src="js/main.min.js"></script>
 </body>
 

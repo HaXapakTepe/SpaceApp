@@ -41,6 +41,7 @@ function scripts() {
   return src([
       'node_modules/jquery/dist/jquery.js',
       'node_modules/swiper/swiper-bundle.js',
+      'node_modules/chart.js/dist/chart.js',
       'app/js/main.js'
     ])
     .pipe(concat('main.min.js'))
@@ -92,9 +93,7 @@ function cleanDist() {
 
 function watching() {
   watch(['app/scss/**/*.scss'], styles);
-  watch(['app/module/**/*.scss'], styles);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
-  watch(['app/module/**/*.html']).on('change', browserSync.reload);
   watch(['app/**/*.html']).on('change', browserSync.reload);
 }
 

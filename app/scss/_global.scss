@@ -46,7 +46,7 @@ main {
 
 .title {
   position: relative;
-  padding-top: 80px;
+  padding-top: 75px;
   color: $title;
   font-weight: 900;
   font-size: 32px;
@@ -54,7 +54,7 @@ main {
   &::before {
     content: "";
     position: absolute;
-    top: 60px;
+    top: 50px;
     width: 75px;
     height: 8px;
     background: #E01E2E;
