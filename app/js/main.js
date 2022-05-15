@@ -21,19 +21,20 @@ const myChart = new Chart(ctx, {
       data: ["38", "44", "49", "51", "54", "56"],
       backgroundColor: ['#E01E2E'],
       borderColor: ['#E01E2E'],
+      borderJoinStyle: 'round',
+      lineTension: 0.5,
       borderWidth: 2,
-      lineTension: 0.5
+      radius: 5
     }]
   },
   options: {
-    maintaiAsoectRatio: true,
     scales: {
-      y: {
+      yAxis: {
         suggestedMin: 30,
         suggestedMax: 60
       },
-      x: {
-        // display: false
+      xAxes: {
+        // display: false,
       }
     }
   }
