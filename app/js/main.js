@@ -34,8 +34,11 @@ const myChart = new Chart(ctx, {
         suggestedMax: 60
       },
       xAxes: {
-        // display: false,
-      }
-    }
+        font: {
+          weight: 700,
+          color: '#666666'
+        }
+      },
+    },
   }
 });
