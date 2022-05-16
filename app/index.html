@@ -15,9 +15,12 @@
       <header class="header">
         <div class="header__inner">
           <nav class="menu">
+            <button class="menu__btn">
+              <span class="menu__center"></span>
+            </button>
             <ul class="menu__list">
               <li class="menu__item">
-                <a class="menu__link menu__link--active" href="#">
+                <a class="menu__link" href="#">
                   Главная
                 </a>
               </li>
@@ -136,7 +139,7 @@
               Промо-давление увеличивается
             </h2>
             <div class="info__chart">
-              <canvas id="myChart" width="550" height="340"></canvas>
+              <canvas class="info__canvas" id="myChart" style="width: 550px; height: 300px"></canvas>
             </div>
             <a class="info__link link" href="#" target="_blank">
               Почему увеличивается?

@@ -1,7 +1,16 @@
+$('.menu__link').on('click', function () {
+  $(this).toggleClass('menu__link--active');
+  $('.menu__link').not($(this)).removeClass('menu__link--active');
+});
+
 $('.analytics__item').on('click', function () {
   $(this).toggleClass('analytics__item--active');
   $('.analytics__item').not($(this)).removeClass('analytics__item--active');
 });
+
+$('.menu__btn').on('click', function () {
+  $('.menu__list').toggleClass('menu__list--active')
+})
 
 
 const swiper = new Swiper('.slider__wrap', {
@@ -31,12 +40,22 @@ const myChart = new Chart(ctx, {
     scales: {
       yAxis: {
         suggestedMin: 30,
-        suggestedMax: 60
+        suggestedMax: 60,
+        ticks: {
+          font: {
+            size: 14,
+            color: '#999999'
+          },
+        },
       },
       xAxes: {
-        font: {
-          weight: 700,
-          color: '#666666'
+        ticks: {
+          font: {
+            size: 16,
+            weight: 700,
+            height: 19,
+            color: '#666666',
+          },
         }
       },
     },
