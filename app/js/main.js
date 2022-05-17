@@ -37,11 +37,17 @@ const myChart = new Chart(ctx, {
     }]
   },
   options: {
+    plugins: {
+      legend: false
+    },
     scales: {
       yAxis: {
         suggestedMin: 30,
         suggestedMax: 60,
         ticks: {
+          callback: function (value, index, ticks) {
+            return value + '%';
+          },
           font: {
             size: 14,
             color: '#999999'
@@ -56,8 +62,11 @@ const myChart = new Chart(ctx, {
             height: 19,
             color: '#666666',
           },
-        }
+        },
+        grid: {
+          display: false,
+        },
       },
     },
-  }
+  },
 });
