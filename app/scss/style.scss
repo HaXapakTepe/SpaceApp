@@ -60,7 +60,8 @@
     padding-top: 60px;
   }
 
-  &__content {
+  &__content,
+  &__item--active .analytics__item-icon {
     position: relative;
   }
 
@@ -68,17 +69,25 @@
     margin: 0 auto;
   }
 
-  &__icon-mini {
+  &__icon-mini,
+  &__icon {
     position: absolute;
+  }
+
+  &__icon-mini {
     right: 72px;
     bottom: 18px;
+  }
+
+  &__title,
+  &__subtitle {
+    text-align: center;
   }
 
   &__title {
     padding-top: 75px;
     font-weight: 900;
     font-size: 64px;
-    text-align: center;
   }
 
   &__items {
@@ -119,7 +128,6 @@
   }
 
   &__item--active .analytics__item-icon {
-    position: relative;
     background-color: $accent;
     width: 93px;
     height: 93px;
@@ -135,7 +143,8 @@
     display: block;
   }
 
-  &__item--active .analytics__subtitle--first {
+  &__item--active .analytics__subtitle--first,
+  &__subtitle {
     margin-bottom: 20px;
   }
 
@@ -152,17 +161,14 @@
   }
 
   &__icon {
-    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%)
   }
 
   &__subtitle {
-    margin-bottom: 20px;
     font-weight: 700;
     font-size: 20px;
-    text-align: center;
   }
 
   &__subtitle--first {
@@ -175,9 +181,23 @@
 }
 
 .info {
-  &__inner {
+
+  &__inner,
+  &__box-text,
+  &__box-text--top,
+  &__box-text--middle,
+  &__box-text--bottom {
     display: flex;
+  }
+
+  &__inner,
+  &__box-text--top,
+  &__box-text--middle,
+  &__box-text--bottom {
     justify-content: space-between;
+  }
+
+  &__inner {
     padding-bottom: 6px;
   }
 
@@ -187,25 +207,29 @@
   }
 
   &__chart {
-    width: 100%;
-    height: 100%;
-    max-width: 600px;
-    max-height: 340px;
-    margin-left: 30px;
-    margin-bottom: 102px;
+    padding-left: 60px;
+    margin-bottom: 77px;
+  }
+
+  &__link,
+  &__box-text {
+    text-align: center;
   }
 
   &__link {
     display: block;
     margin: 0 auto;
-    text-align: center;
     max-width: 390px;
     font-size: 20px;
     padding: 18px 50px;
   }
 
-  &__img-box {
+  &__img-box,
+  &__img-text {
     position: relative;
+  }
+
+  &__img-box {
     padding-top: 20px;
   }
 
@@ -215,18 +239,19 @@
 
   &__box-text {
     position: absolute;
-    display: flex;
     color: #000000;
-    text-align: center;
     width: 100%;
     flex-direction: column;
   }
 
+  &__box-text--top,
+  &__box-text--middle,
+  &__box-text--bottom {
+    flex-direction: row;
+  }
+
   &__box-text--top {
     top: 7%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
   }
 
   &__box-text--top .info__img-text:nth-child(1) {
@@ -248,9 +273,6 @@
 
   &__box-text--middle {
     top: 34.5%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
   }
 
   &__box-text--middle .info__img-text:nth-child(1) {
@@ -266,9 +288,6 @@
 
   &__box-text--bottom {
     top: 58%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
   }
 
   &__box-text--bottom .info__img-text:nth-child(1) {
@@ -284,7 +303,6 @@
   }
 
   &__img-text {
-    position: relative;
     background-color: $title;
     padding: 6px 13px;
     border-radius: 5px;
@@ -295,8 +313,13 @@
 }
 
 .slider {
+
+  &__title,
+  &__subtitle {
+    max-width: 700px;
+  }
+
   &__title {
-    max-width: 615px;
     margin-bottom: 29px;
     padding-left: 87px;
   }
@@ -314,9 +337,19 @@
     margin-bottom: 10px;
   }
 
-  &__items {
+  &__items,
+  &__content,
+  &__info,
+  &__bullets {
     display: flex;
+  }
+
+  &__items,
+  &__info {
     justify-content: space-between;
+  }
+
+  &__items {
     min-width: 0;
   }
 
@@ -329,11 +362,15 @@
     max-width: 600px;
   }
 
-  &__subtitle {
+  &__subtitle,
+  .arrow,
+  .swiper-pagination-bullet {
     position: relative;
+  }
+
+  &__subtitle {
     padding: 35px 0 0 88px;
     margin-bottom: 81px;
-    font-weight: 700;
     font-size: 18px;
     color: $title;
 
@@ -354,7 +391,6 @@
   }
 
   &__content {
-    display: flex;
     align-items: center;
     padding-left: 87px;
     margin-bottom: 50px;
@@ -375,11 +411,6 @@
     color: $title;
   }
 
-  &__info {
-    display: flex;
-    justify-content: space-between;
-  }
-
   &__info-box {
     max-width: 266px;
 
@@ -396,8 +427,6 @@
   }
 
   .arrow {
-    position: relative;
-
     &::before {
       content: "";
       position: absolute;
@@ -411,12 +440,10 @@
   }
 
   &__bullets {
-    display: flex;
     justify-content: center;
   }
 
   .swiper-pagination-bullet {
-    position: relative;
     width: 16px;
     height: 16px;
     background: transparent;
